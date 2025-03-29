@@ -1,6 +1,6 @@
 ﻿# Paretod - Texnoera Activities
 
-We are a hackathon team, and our team name is **Paretod**. Our project is called **Texnoera Activities**. \n
+We are a hackathon team, and our team name is **Paretod**. Our project is called **Texnoera Activities**.
 This repository contains the front-end codes.
 
 ## About
