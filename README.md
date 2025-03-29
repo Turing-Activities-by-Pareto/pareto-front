@@ -35,6 +35,8 @@ Texnoera Activities is a platform that enables users to participate in various t
 ## Team Members
 
 - [Kenan Qafarov](https://github.com/kenanqafarov)
+- [Fatimə Novruzova](https://github.com/fatimanvrzz)
+
 
 ## License
 
