@@ -20,6 +20,7 @@ const AddEvents = () => {
           </div>
           <div className="right_part">
             <img src={closeSquare} alt="icon" />
+            <p>sdfdsfsfdsf</p>
           </div>
         </div>
       </div>
