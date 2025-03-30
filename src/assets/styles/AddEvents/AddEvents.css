@@ -1,0 +1,31 @@
+/* @import "../../fonts/futura/Futura\ Bold\ font.ttf" */
+
+
+.head {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    >.head_content {
+
+        width: 95%;
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        >.left_part {
+            >h2 {
+                color: #0D1B4D;
+            }
+
+            >p {
+                color: #808080;
+                font-style: italic;
+            }
+        }
+    }
+
+}
