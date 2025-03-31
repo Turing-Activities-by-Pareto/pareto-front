@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  docker:
+    environment: docker
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:    
+    - name: Build image
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        GITHUB_RUN_NUMBER: ${{ github.run_number }}
+      run: docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" && docker push "$DOCKER_USERNAME/pareto-front:$GITHUB_RUN_NUMBER"
+
+      
