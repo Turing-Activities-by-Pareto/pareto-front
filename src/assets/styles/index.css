@@ -1,15 +1,9 @@
-@font-face {
-    font-family: "Futura Bold";
-    src: url("../../fonts/futura/Futura\ Bold\ font.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Futura Bold", sans-serif;
-    
+    font-family: 'Poppins', sans-serif;
 }

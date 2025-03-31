@@ -1,150 +1,315 @@
-/* @import "../../fonts/futura/Futura\ Bold\ font.ttf" */
-
 .add-events {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+}
 
-    .head {
-        display: flex;
-        width: 100%;
-        justify-content: center;
+.head {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
-        .head_content {
-            width: 95%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+.head_content {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-            .left_part {
-                h2 {
-                    color: #0D1B4D;
-                }
-
-                p {
-                    color: #808080;
-                    font-style: italic;
-                }
-            }
-        }
-    }
-
-    .body-events {
-        width: 95%;
-        display: flex;
-        justify-content: center;
-
-        .body_content {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin: 0 auto;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .photo_add {
-            display: flex;
-            flex-direction: column;
-            border: 1.75px dashed #FF4400;
-            border-radius: 10px;
-            background-color: #F5F5F5;
-            width: 50%;
-            height: 600px;
-            align-items: center;
-            justify-content: center;
-
-            :hover {
-                cursor: pointer;
-            }
-        }
-
-        .form_side {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 50%;
-            height: 600px;
-            gap: 18px;
-        }
-
-        .form_group {
-            width: 80%;
-            height: auto;
-            border: #808080 solid 1px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 10px 16px;
-
-            :hover {
-                cursor: pointer;
-            }
-        }
-
-        .form_group p {
-            margin: 0;
-            font-size: 16px;
-            color: #0D1B4D;
-        }
-
-        .form_group h3 {
-            color: #808080;
-            margin: 0;
-            font-size: 16px;
-        }
-
-        .form_group.active h3 {
-            color: #FF4400;
-        }
-
-        .form_group.active {
-            border-color: #0D1B4D;
-        }
-    }
-
-    .foot {
-        display: flex;
-        width: 95%;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .foot-in {
-        width: 100%;
-        display: flex;
-        gap: 40px;
-        justify-content: space-between;
-    }
-
-    .foot-in p {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        border-radius: 8px;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .confirm {
-        background-color: #FF4400;
-        color: white;
-        border: 0.5px solid #FF4400;
-    }
-
-    .cancel {
-        background-color: transparent;
-        color: red;
-        border: 0.5px solid #FF4400;
-    }
+.left_part h2 {
+    color: #0D1B4D;
+    font-size: 32px;
 
 }
+
+.left_part p {
+    color: #808080;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.body-events {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.body_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.photo_add {
+    display: flex;
+    flex-direction: column;
+    border: 1.75px dashed #FF4400;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    width: 50%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo_add:hover {
+    cursor: pointer;
+}
+
+.form_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 600px;
+    gap: 18px;
+}
+
+.form_group {
+    position: relative;
+    width: 80%;
+    height: auto;
+    border: #808080 solid 1px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 16px;
+}
+
+.form_group:hover {
+    cursor: pointer;
+}
+
+.category-container {
+    width: 100%;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.category-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-category {
+    margin: 0;
+    font-size: 16px;
+    color: #0D1B4D;
+}
+
+.dropdown-icon {
+    transition: transform 0.2s ease;
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #0D1B4D;
+    border-radius: 8px;
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    color: #0D1B4D;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.form_group p {
+    margin: 0;
+    font-size: 16px;
+    color: #0D1B4D;
+}
+
+.form_group h3 {
+    color: #808080;
+    margin: 5px 0;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.form_group.active h3 {
+    color: #FF4400;
+}
+
+.form_group.active {
+    border-color: #0D1B4D;
+}
+
+.foot {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.foot-in {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.foot-in p {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: #FF4400;
+    color: white;
+    border: 0.5px solid #FF4400;
+}
+
+.cancel {
+    background-color: transparent;
+    color: red;
+    border: 0.5px solid #FF4400;
+}
+
+
+h3, h2, p {
+    font-family: "Poppins", sans-serif;
+}
+
+.forms-row {
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.location-form, 
+.max-people-form {
+    flex: 1; 
+    min-width: 0; 
+}
+.form_side > .form_group {
+    width: 95%;
+}
+.form-input {
+    width: 100%;
+    border: none; 
+    outline: none; 
+    background: transparent; 
+    padding: 8px 0; 
+    font-size: inherit; 
+  }
+  
+  .form-input::placeholder {
+    color: #808080; 
+    opacity: 1; 
+  }
+  
+  .form_group.active .form-input::placeholder,
+  .form_group:hover .form-input::placeholder {
+    color: #808080; 
+  }
+.input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .form-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: inherit;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .form-note {
+    position: absolute;
+    left: 0;
+    top: 150%;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #888;
+    width: 100%;
+    display: block;
+  }
+  
+  .form-input::placeholder {
+    color: #999;
+  }
+
+  .guests {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .guests p {
+    font-style: italic;
+    color: #808080;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 41px;
+    margin-bottom: 20.5px;
+  }
+  
+  .input-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .checkbox-option input[type="checkbox"] {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .checkbox-option label {
+    cursor: pointer;
+  }
+  
