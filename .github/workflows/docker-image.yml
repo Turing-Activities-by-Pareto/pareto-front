@@ -27,7 +27,7 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-        run: docker build -t "$DOCKER_USERNAME/pareto-front:$GITHUB_RUN_NUMBER" .
+        run: docker build -t "$DOCKER_USERNAME/pareto-front:gh-run-$GITHUB_RUN_NUMBER" -t "$DOCKER_USERNAME/pareto-front:latest" .
     
       - name: Push Docker image
         env:
