@@ -33,5 +33,5 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
-        run: docker push "$DOCKER_USERNAME/pareto-front:$GITHUB_RUN_NUMBER"
+        run: docker push --all-tags "$DOCKER_USERNAME/pareto-front"
      
